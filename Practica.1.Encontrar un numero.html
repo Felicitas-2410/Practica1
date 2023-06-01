@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero la Asar</title>
+    <link rel="stylesheet" href="forma1.css">
+    
+</head>
+<body>
+    <div id="Contenido">
+        <h1>"Encuenra el numero"</h1>
+
+        <button onclick="ENTRADA()">Ingresar</button>
+        <script>
+            var SN;
+            function ENTRADA()
+{
+      let random = Math.random();
+      random = Math.random();
+      random = random*100+1;
+      random = Math.trunc(random);
+      let INTENTOS = 0;
+
+    while(true)
+    {
+        SN=Number.parseInt(prompt("ingresa un numero"));
+
+        if (SN == 85)
+        {
+            alert("Es correcto: felicidades");
+            alert("Has logrado los " +(INTENTOS)+ " intentos");
+            break;
+        }
+        if(SN <= random)
+        {
+            alert("el valor es menor: intentalo de nuevo");
+        }
+        if(SN > random)
+        {
+            alert("el valoer es mayor: intentalo de nuevo");
+        }
+        INTENTOS+=1;
+    }
+}
+        </script>
+    </div>
+</body>
+</html>
